@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Guess the Number</title>
+</head>
+<body>
+    <h1>Guess the number between 1 and {{ max_number }}</h1>
+    <form method="post">
+        <input type="number" name="guess" required>
+        <button type="submit">Submit Guess</button>
+    </form>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+    {% if proximity %}
+        <p>{{ proximity }}</p>
+    {% endif %}
+    {% if hint %}
+        <p style="color: gray;">{{ hint }}</p>
+    {% endif %}
+
+    <p>Attempts: {{ attempts }}</p>
+    <a href="{{ url_for('reset') }}">Start Over</a>
+</body>
+</html>
