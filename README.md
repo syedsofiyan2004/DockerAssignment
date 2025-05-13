@@ -25,6 +25,10 @@ if you want to shut it down use command:
 docker-compose down
 ```
 
+### **The Docker Hub Respository**
+```sh
+https://hub.docker.com/repository/docker/syedsofiyan/guessing-game/
+```
 
 
 
